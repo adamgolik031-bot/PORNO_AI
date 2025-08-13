@@ -1,0 +1,28 @@
+[package]
+name = "rust_fibs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+# Web scraping
+fantoccini = "0.19"
+tokio = { version = "1.0", features = ["full"] }
+
+# JSON handling
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+
+# Web server
+warp = "0.3"
+
+# System utilities
+num_cpus = "1.16"
+
+# Async utilities (if needed for futures)
+futures = "0.3"
+#env file (needed fro securyty )
+dotenv = "0.15.0"
+
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "json", "chrono", "uuid"] }
+chrono = { version = "0.4", features = ["serde"] }
